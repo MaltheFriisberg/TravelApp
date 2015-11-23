@@ -1,4 +1,5 @@
 <div ng-repeat="country in countryVisits" class="col-xs-6"
      ng-click="editCountry(country)">
+    <img ng-src="{{country.imageLocation}}">
     <label>Name</label> {{country.name}}
 </div>
