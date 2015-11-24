@@ -11,7 +11,7 @@ angular.module("countryApp").config(
         $stateProvider.state("Home", {
             url: "/Home",
             templateUrl: "PartialViews/Home.html",
-            controller: "TopLevelController"
+            controller: "allCountriesController"
         })
             .state("Contact", {
                 url: "/Contact",
@@ -21,11 +21,13 @@ angular.module("countryApp").config(
                 url: "/About",
                 templateUrl: "PartialViews/About.html"
             });
-        $stateProvider.state("Edit", {
-                url: "/Edit",
-                templateUrl: "ParialViews/Edit.html",
-                controller: "TopLevelController", //redundant??
-                params: {country:null}
+        $stateProvider.state("new-country", {
+                url: "/new-country",
+                templateUrl: "PartialViews/Edit.html",
+                controller: "countriesDataEntryController", //redundant??
+                params: {country:null},
+
+
             });
 
     });

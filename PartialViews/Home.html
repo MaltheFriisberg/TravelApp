@@ -1,5 +1,11 @@
-<div ng-repeat="country in countryVisits" class="col-xs-6"
-     ng-click="editCountry(country)">
+<div>
+    <label>Search Country</label>
+<input ng-model="filter" name="Search">
+</div>
+<div ng-repeat="country in countryVisits | filter : filter | CountryFilter" class="col-xs-6">
+     <div ng-click="editCountry(country)">
     <img ng-src="{{country.imageLocation}}">
-    <label>Name</label> {{country.name}}
+    <label>Name</label> {{country.name || CountryFilter}}
+         </div>
+
 </div>
