@@ -2,7 +2,7 @@
  * Created by Mal on 17-11-2015.
  */
 angular.module("countryApp").controller("TopLevelController",
-    ["$scope", "$resource","countryService", function($scope, $resource, $state, countryService) {
+    ["$scope", "$resource", function($scope, $resource, $state, countryService) {
 
         console.log("Hi from topLevelController");
         $scope.countryResource =
@@ -16,7 +16,11 @@ angular.module("countryApp").controller("TopLevelController",
         console.log(data.length);
         console.log($scope.countryVisits.isArray);
 
+        $scope.getAllCountries = function() {
+            return countryService.getCountries();
+        },
         $scope.editCountry = function(countryToEdit) {
+
             console.log("editCountry");
             $state.go("Edit",
                 {country: countryToEdit});
