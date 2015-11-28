@@ -3,10 +3,10 @@
 <input ng-model="filter" name="Search">
 </div>
 <!-- | filter : filter | CountryFilter -->
-<div ng-repeat="country in getAllCountries()" class="col-xs-6">
+<div ng-repeat="country in getAllCountries() | filter : filter | CountryFilter" class="col-xs-6">
      <div ng-click="editCountry(country)">
     <img ng-src="{{country.imageLocation}}">
-    <label>Name</label> {{country.name}}
+    <label>Name</label> {{country.name || CountryFilter}}
          </div>
 
 </div>

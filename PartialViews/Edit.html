@@ -1,5 +1,59 @@
-Edit
-<label ng-model="country.name" name ="name">{{country.name}}</label> gg {{country.name}}
+<div class = "container"><label>Edit Details for {{country.name}}</label></div>
+<form novalidate name="countryForm" ng-submit="saveCountry()">
+<div class="form-group">
+       <div class="col-sm-6">
+<label>Name</label>
+
 <input type="text" class="form-control"
        ng-model="country.name" name="name"
        required ng-minlength="4" />
+       </div>
+</div>
+<div class="form-group">
+       <div class="col-sm-6">
+           <label>Size</label>
+              <input type="text" class="form-control"
+                     ng-model="country.size" name="size"
+                     required ng-minlength="4" />
+       </div>
+</div>
+<div class="form-group">
+       <div class="col-sm-6">
+           <label>Population</label>
+              <input type="text" class="form-control"
+                     ng-model="country.population" name="population"
+                     required ng-minlength="4" />
+       </div>
+</div>
+<div class="form-group">
+        <div class="col-sm-12">
+            <label>Description</label>
+            <textarea type="text" class="form-control"
+                   ng-model="country.description" name="description"
+                   required ng-minlength="4" ></textarea>
+</div>
+        </div>
+<div class="form-group">
+    <div class="col-sm-12">
+        <label>Languages</label>
+        <input type="text" class="form-control"
+               ng-model="country.languages" name="languages"
+               required ng-minlength="4" />
+    </div>
+</div>
+    <div class="col-xs-12">
+        <button type="submit" class="btn btn-primary pull-right" ng-click="saveCountry(country)">
+            Save
+        </button>
+        <button type="button" class="btn btn-default">Back</button>
+        <button type="button" class="btn btn-danger" ng-click="deleteCountry(country)">Delete</button>
+    </div>
+</form>
+
+
+
+
+
+
+
+

@@ -5,8 +5,8 @@
 // help here https://docs.angularjs.org/tutorial/step_11
 angular.module("countryApp").factory("countryService",
     function($resource, $q) {
-        var Countries = [];
-        var deferred = $q.defer();
+        //var Countries = [];
+
 
         console.log("countryService");
 
@@ -18,13 +18,14 @@ angular.module("countryApp").factory("countryService",
 
         return {
             getCountries: function () {
-
+                var deferred = $q.defer();
                 console.log("getCountries");
+
                 //Countries = countryResource.query();
                     //when the data comes back from the server
 
 
-                console.log(Countries.length);
+                console.log(Countries.length+ "finished");
 
                 return Countries;
             },
