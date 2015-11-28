@@ -3,22 +3,22 @@
  */
 //Could Instantiate a new module, but lets not for now
 // help here https://docs.angularjs.org/tutorial/step_11
-angular.module("countryService").factory("countryService",["$scope", "$q", "$resource",
-    function($scope, $q, $resource) {
+angular.module("countryApp").factory("countryService",
+    function() {
         var Countries = [];
 
+        console.log("countryService");
 
-
-        $scope.countryResource =
+        /*$scope.countryResource =
             $resource("https://travel-project.azurewebsites.net/countries/:id",
-                { id: "@id"},{ update: { method: 'PUT' }});
+                {id: "@id"}, {update: {method: 'PUT'}});
 
-        Countries = countryResource.query();
+        Countries = countryResource.query();*/
 
         return {
-            getCountries: function() {
+            getCountries: function () {
                 //not working
-                countryResource.query(function(dataFromServer) {
+                countryResource.query(function (dataFromServer) {
                     //when the data comes back from the server.
 
                     Countries = dataFromServer;
@@ -27,7 +27,7 @@ angular.module("countryService").factory("countryService",["$scope", "$q", "$res
                 console.log("finished")
             },
             //which controller should do this??
-            saveUpdateCountry: function(countryToUpdate) {
+            saveUpdateCountry: function (countryToUpdate) {
                 //add to array
                 //$scope.countryResource.
 
@@ -37,8 +37,6 @@ angular.module("countryService").factory("countryService",["$scope", "$q", "$res
             //deleteCountry:
 
 
-
-
         }
 
-    }]);
+    });

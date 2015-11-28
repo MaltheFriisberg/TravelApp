@@ -2,7 +2,7 @@
  * Created by Mal on 17-11-2015.
  */
 angular.module("countryApp").controller("TopLevelController",
-    ["$scope", "$resource","$state", function($scope, $resource, $state, countryService) {
+    ["$scope", "$resource","$state", 'countryService', function($scope, $resource, $state, countryService) {
 
         console.log("Hi from topLevelController");
         $scope.countryResource =
