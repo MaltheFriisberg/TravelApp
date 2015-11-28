@@ -11,6 +11,7 @@ angular.module("countryApp").config(
         $stateProvider.state("Home", {
             url: "/Home",
             templateUrl: "PartialViews/Home.html",
+            //this controller will take care of the list of countries, basicly just routing them to the Edit view
             controller: "allCountriesController"
         })
             .state("Contact", {
@@ -24,7 +25,8 @@ angular.module("countryApp").config(
         $stateProvider.state("new-country", {
                 url: "/new-country",
                 templateUrl: "PartialViews/Edit.html",
-                controller: "countriesDataEntryController", //redundant??
+                //this controller will take care of what happens in the Edit view with the country passed as parameter
+                controller: "countriesDataEntryController",
                 params: {country:null},
 
 

@@ -7,6 +7,8 @@ angular.module("countryService").factory("countryService",["$scope", "$q", "$res
     function($scope, $q, $resource) {
         var Countries = [];
 
+
+
         $scope.countryResource =
             $resource("https://travel-project.azurewebsites.net/countries/:id",
                 { id: "@id"},{ update: { method: 'PUT' }});

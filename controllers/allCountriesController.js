@@ -10,6 +10,7 @@ angular.module("countryApp").
 
         $scope.editCountry = function(countryToEdit) {
             console.log("editCountry "+countryToEdit.name)
+            //Navigation.js will take it from here
             $state.go("new-country",
                 {country: countryToEdit});
         };
