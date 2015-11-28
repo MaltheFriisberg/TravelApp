@@ -41,6 +41,9 @@
                required ng-minlength="4" />
     </div>
 </div>
+
+    </div>
+    <div ng-repeat="Track in getTracks(country._id)">{{Track.name}}</div>
     <div class="col-xs-12">
         <button type="submit" class="btn btn-primary pull-right" ng-click="saveCountry(country)">
             Save
@@ -48,6 +51,7 @@
         <button type="button" class="btn btn-default">Back</button>
         <button type="button" class="btn btn-danger" ng-click="deleteCountry(country)">Delete</button>
     </div>
+
 </form>
 
 

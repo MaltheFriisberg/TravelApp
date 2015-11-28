@@ -3,7 +3,7 @@
  */
 angular.module("countryApp").factory("trackService",
     function($resource, $q) {
-        //var Tracks = [];
+        var Tracks = [];
 
 
         console.log("trackService");
@@ -12,19 +12,24 @@ angular.module("countryApp").factory("trackService",
             $resource("https://travel-project.azurewebsites.net/countries/:id/tracks",
                 { id: "@id"},{ update: { method: 'PUT' }});
 
-       // var Countries = trackResource.query();
+        //var Tracks = trackResource.query();
 
         return {
-            getTracks: function (country) {
-                var deferred = $q.defer();
-                console.log("getCountries");
-                var Tracks = [];
-                Track = trackResource.query(country);
-                //Countries = countryResource.query();
+            //http://stackoverflow.com/questions/26451858/angularjs-resource-passes-id-as-query-parameter-instead-in-url
+            getTracksForCountry: function (country) {
+                /*
+                console.log("getTracks");
+
+                //Tracks = trackResource.query(function(){
+                    //trackResource.get({id: country.id});
+
+
+                //});
+                Tracks = trackResource.query(country._id);
                 //when the data comes back from the server
 
 
-                console.log(Countries.length+ "finished");
+                //console.log(Tracks.length+ "finished");*/
 
                 return Tracks;
             },

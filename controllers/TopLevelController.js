@@ -2,8 +2,8 @@
  * Created by Mal on 17-11-2015.
  */
 angular.module("countryApp").controller("TopLevelController",
-    ["$scope", "$resource","$state", 'countryService',
-        function($scope, $resource, $state, countryService) {
+    ["$scope", "$resource","$state", 'countryService', 'trackService',
+        function($scope, $resource, $state, countryService, trackService) {
 
         /*console.log("Hi from topLevelController");
         $scope.countryResource =
@@ -18,13 +18,10 @@ angular.module("countryApp").controller("TopLevelController",
         $scope.countryVisits = $scope.countryResource.query();
         var data = $scope.countryVisits;*/
 
-        $scope.getAllCountries = function() {
-            console.log("getAllCountries");
-            console.log(countryService.getCountries().length);
-            return countryService.getCountries();
-        },
+        $scope.Countries = countryService.getCountries();
+        //$scope.Tracks = trackService.getTracks();
         $scope.getTracks = function(countryId) {
-            return trackService.get(countryId);
+            return trackService.getTracksForCountry(countryId);
         }
 
         /*$scope.editCountry = function(countryToEdit) {
