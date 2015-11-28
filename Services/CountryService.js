@@ -4,27 +4,29 @@
 //Could Instantiate a new module, but lets not for now
 // help here https://docs.angularjs.org/tutorial/step_11
 angular.module("countryApp").factory("countryService",
-    function() {
+    function($resource, $q) {
         var Countries = [];
+        var deferred = $q.defer();
 
         console.log("countryService");
 
-        /*$scope.countryResource =
+        var countryResource =
             $resource("https://travel-project.azurewebsites.net/countries/:id",
                 {id: "@id"}, {update: {method: 'PUT'}});
 
-        Countries = countryResource.query();*/
+        var Countries = countryResource.query();
 
         return {
             getCountries: function () {
-                //not working
-                countryResource.query(function (dataFromServer) {
-                    //when the data comes back from the server.
 
-                    Countries = dataFromServer;
+                console.log("getCountries");
+                //Countries = countryResource.query();
+                    //when the data comes back from the server
 
-                });
-                console.log("finished")
+
+                console.log(Countries.length);
+
+                return Countries;
             },
             //which controller should do this??
             saveUpdateCountry: function (countryToUpdate) {

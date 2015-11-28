@@ -4,7 +4,7 @@
 angular.module("countryApp").controller("TopLevelController",
     ["$scope", "$resource","$state", 'countryService', function($scope, $resource, $state, countryService) {
 
-        console.log("Hi from topLevelController");
+        /*console.log("Hi from topLevelController");
         $scope.countryResource =
             $resource("https://travel-project.azurewebsites.net/countries/:id",
                 { id: "@id"},{ update: { method: 'PUT' }});
@@ -15,9 +15,11 @@ angular.module("countryApp").controller("TopLevelController",
         //get all tracks http://travel-project.azurewebsites.net/tracks
 
         $scope.countryVisits = $scope.countryResource.query();
-        var data = $scope.countryVisits;
+        var data = $scope.countryVisits;*/
 
         $scope.getAllCountries = function() {
+            console.log("getAllCountries");
+            console.log(countryService.getCountries().length);
             return countryService.getCountries();
         },
         $scope.getTracks = function(countryId) {
