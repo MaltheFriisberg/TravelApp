@@ -38,6 +38,7 @@ angular.module("countryApp").factory("trackService",
                 return Tracks;
             },
             getAllTracks: function () {
+                console.log("getAllTracks");
                 AllTracks = allTracksResource.query();
                 return AllTracks;
             },

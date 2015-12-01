@@ -9,10 +9,10 @@ angular.module("countryApp")
         $scope.country = $stateParams.country;
 
         $scope.tracks = [];
-
+        $scope.AllTracks = [];
 
         $scope.tracks = trackService.getTracksForCountry($scope.country);
-
+        $scope.AllTracks = trackService.getAllTracks();
 
 
         /*$scope.deleteVisit = function() {
