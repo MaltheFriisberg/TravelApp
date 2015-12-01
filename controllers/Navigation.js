@@ -27,7 +27,7 @@ angular.module("countryApp").config(
                 templateUrl: "PartialViews/Edit.html",
                 //this controller will take care of what happens in the Edit view with the country passed as parameter
                 controller: "countriesDataEntryController",
-                params: {country:null},
+                params: {country:null}
 
 
             });

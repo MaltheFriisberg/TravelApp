@@ -4,9 +4,16 @@
 angular.module("countryApp")
 
 .controller("countriesDataEntryController",
-    function($scope, $state, $stateParams) {
+    function($scope, $state, $stateParams, trackService) {
         //catching the country object passed by $stateParams
         $scope.country = $stateParams.country;
+
+        $scope.tracks = [];
+
+
+        $scope.tracks = trackService.getTracksForCountry($scope.country);
+
+
 
         /*$scope.deleteVisit = function() {
 
