@@ -19,6 +19,7 @@ angular.module("countryApp").controller("TopLevelController",
         var data = $scope.countryVisits;*/
 
         $scope.Countries = countryService.getCountries();
+        $scope.countryResource = countryService.getResource();
         //$scope.Tracks = trackService.getTracks();
 
         /*$scope.editCountry = function(countryToEdit) {
@@ -27,5 +28,6 @@ angular.module("countryApp").controller("TopLevelController",
             $state.go("new-country",
                 {country: countryToEdit});
         };*/
+
 
     }]);

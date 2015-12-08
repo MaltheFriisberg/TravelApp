@@ -12,7 +12,7 @@ angular.module("countryApp").factory("countryService",
 
         var countryResource =
             $resource("https://travel-project.azurewebsites.net/countries/:id",
-                {id: "@id"}, {update: {method: 'PUT'}});
+                {id: "@id"}, {update: {method: 'PUT'}, save: { method: "PUT" }});
 
         var Countries = countryResource.query();
 
@@ -21,17 +21,25 @@ angular.module("countryApp").factory("countryService",
                 var deferred = $q.defer();
                 console.log("getCountries");
 
-                //Countries = countryResource.query();
-                    //when the data comes back from the server
+
+
+                /*Countries.$promise.then(function(data) {
+                    return data;
+                });*/
 
 
                 console.log(Countries.length+ "finished");
 
                 return Countries;
             },
+            getResource: function () {
+                return $resource("https://travel-project.azurewebsites.net/countries/:id",
+                    {id: "@id"}, {update: {method: 'PUT'}, save: { method: "PUT" }});
+            },
             //which controller should do this??
-            saveUpdateCountry: function (countryToUpdate) {
+            saveCountry: function (countryToUpdate) {
                 //add to array
+                Countries.push()
                 //$scope.countryResource.
 
                 //save with the api

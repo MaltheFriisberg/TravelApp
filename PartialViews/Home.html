@@ -1,6 +1,7 @@
 <div>
     <label>Search Country</label>
 <input ng-model="filter" name="Search">
+<button type="button" class="btn btn-default pull-right" ng-click="newCountry()"> new Country </button>
 </div>
 <!-- | filter : filter | CountryFilter -->
 <div ng-repeat="country in Countries | filter : filter | CountryFilter" class="col-xs-6">

@@ -7,11 +7,20 @@ angular.module("countryApp").
     function($scope, $state) {
         console.log("hi from the allCountriesController");
 
+        $scope.newCountry = function() {
+
+            //Navigation.js will take it from here
+            $state.go("new-country");
+        };
 
         $scope.editCountry = function(countryToEdit) {
-            console.log("editCountry "+countryToEdit.name)
+            console.log("editCountry "+countryToEdit.name);
             //Navigation.js will take it from here
             $state.go("new-country",
                 {country: countryToEdit});
         };
+
+
+
+
     });

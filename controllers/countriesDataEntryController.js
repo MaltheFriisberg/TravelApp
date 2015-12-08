@@ -7,45 +7,44 @@ angular.module("countryApp")
     function($scope, $state, $stateParams, trackService) {
         //catching the country object passed by $stateParams
         $scope.country = $stateParams.country;
-
+        console.log("DataEntryController " + $scope.country.name);
         $scope.tracks = [];
         $scope.AllTracks = [];
 
         $scope.tracks = trackService.getTracksForCountry($scope.country);
         $scope.AllTracks = trackService.getAllTracks();
 
-
-        /*$scope.deleteVisit = function() {
-
-            $scope.visit.$delete({id: $scope.visit._id}).then(function () {
-                $scope.internshipVisits.splice($scope.internshipVisits.indexOf($scope.visit), 1);
-                $state.go("all-internships");
+        $scope.DeleteCountry = function() {
+            console.log("DeleteCountry");
+            $scope.country.$delete({id: $scope.country._id}).then(function() {
+                $scope.Countries.splice($scope.Countries.indexOf($scope.country), 1);
+                $state.go("Home");
             });
         };
 
+        $scope.SaveCountry = function() {
+            console.log("SaveCountry");
+            if ($scope.countryForm.$valid) {
+                if (!$stateParams.country) { //new
+                    new $scope.countryResource($scope.country).$save(function (country) {
+                        $scope.country._id = country._id;
 
-        $scope.saveVisit = function()
-        {
-            if ($scope.visitForm.$valid) {
-                if (!$stateParams.internship) { //new
-                    new $scope.internshipResource($scope.visit).$save(function (internship) {
-                        $scope.visit._id = internship._id;
-
-                        $scope.internshipVisits.push($scope.visit);
-                        $state.go("all-internships");
+                        $scope.Countries.push($scope.country);
+                        $state.go("Home");
                     });
                 }
                 else //editing
                 {
                     //update example
-                    new $scope.internshipResource($scope.visit).$update(
-                        {id: $scope.visit._id}, function() {
-                            $state.go("all-internships");
+                    new $scope.countryResource($scope.country).$update(
+                        {id: $scope.country._id}, function() {
+                            $state.go("Home");
                         });
                 }
             }
             else {
-                //display error messages
+                alert("Fail");
             }
-        };*/
+        }
+
     });
