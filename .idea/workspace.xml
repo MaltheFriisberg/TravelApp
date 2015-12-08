@@ -105,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/controllers/countriesDataEntryController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -116,8 +116,8 @@
       <file leaf-file-name="allCountriesController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/allCountriesController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20023558">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.3203769">
+              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -158,12 +158,12 @@
         <option value="$PROJECT_DIR$/Services/trackService.js" />
         <option value="$PROJECT_DIR$/controllers/FilterCountries.js" />
         <option value="$PROJECT_DIR$/Services/CountryService.js" />
-        <option value="$PROJECT_DIR$/controllers/countriesDataEntryController.js" />
         <option value="$PROJECT_DIR$/PartialViews/Edit.html" />
         <option value="$PROJECT_DIR$/controllers/TopLevelController.js" />
         <option value="$PROJECT_DIR$/Index.html" />
         <option value="$PROJECT_DIR$/PartialViews/Home.html" />
         <option value="$PROJECT_DIR$/controllers/allCountriesController.js" />
+        <option value="$PROJECT_DIR$/controllers/countriesDataEntryController.js" />
       </list>
     </option>
   </component>
@@ -903,16 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/countriesDataEntryController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.9230769">
@@ -937,10 +927,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/countriesDataEntryController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/allCountriesController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20023558">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.3203769">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
