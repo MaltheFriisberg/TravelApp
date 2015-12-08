@@ -105,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/controllers/countriesDataEntryController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -113,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="allCountriesController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="allCountriesController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/allCountriesController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3203769">
-              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -125,11 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Edit.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Edit.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PartialViews/Edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.23077">
-              <caret line="51" column="19" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.06196841">
+              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -158,12 +158,12 @@
         <option value="$PROJECT_DIR$/Services/trackService.js" />
         <option value="$PROJECT_DIR$/controllers/FilterCountries.js" />
         <option value="$PROJECT_DIR$/Services/CountryService.js" />
-        <option value="$PROJECT_DIR$/PartialViews/Edit.html" />
         <option value="$PROJECT_DIR$/controllers/TopLevelController.js" />
         <option value="$PROJECT_DIR$/Index.html" />
         <option value="$PROJECT_DIR$/PartialViews/Home.html" />
         <option value="$PROJECT_DIR$/controllers/allCountriesController.js" />
         <option value="$PROJECT_DIR$/controllers/countriesDataEntryController.js" />
+        <option value="$PROJECT_DIR$/PartialViews/Edit.html" />
       </list>
     </option>
   </component>
@@ -911,14 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PartialViews/Edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.23077">
-          <caret line="51" column="19" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PartialViews/Home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308">
@@ -930,7 +922,7 @@
     <entry file="file://$PROJECT_DIR$/controllers/countriesDataEntryController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
@@ -939,11 +931,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/allCountriesController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3203769">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PartialViews/Edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06196841">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

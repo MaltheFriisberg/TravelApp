@@ -1,6 +1,9 @@
 
 <form novalidate name="countryForm" ng-submit="saveCountry()">
-    <div class = "container"><label>Edit Details for {{country.name}}</label></div>
+    <div class = "container">
+        <div  ng-show="country.name">
+        <label ng-hide ="!country.name">Edit Details for {{country.name}}</label></div>
+    </div>
     <div class="form-group">
         <div class="col-sm-6">
             <label>Name</label>

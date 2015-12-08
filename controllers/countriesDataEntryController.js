@@ -23,8 +23,9 @@ angular.module("countryApp")
         };
 
         $scope.SaveCountry = function() {
-            console.log("SaveCountry");
+            console.log("SaveCountry" + $scope.country.name);
             if ($scope.countryForm.$valid) {
+                console.log("the form is valid");
                 if (!$stateParams.country) { //new
                     new $scope.countryResource($scope.country).$save(function (country) {
                         $scope.country._id = country._id;
@@ -36,6 +37,7 @@ angular.module("countryApp")
                 else //editing
                 {
                     //update example
+                    console.log("Editing "+$scope.country.name)
                     new $scope.countryResource($scope.country).$update(
                         {id: $scope.country._id}, function() {
                             $state.go("Home");
@@ -43,7 +45,7 @@ angular.module("countryApp")
                 }
             }
             else {
-                alert("Fail");
+                alert("The form is not valid");
             }
         }
 
