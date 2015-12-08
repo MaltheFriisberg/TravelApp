@@ -5,7 +5,7 @@ angular.module("countryApp")
     .filter("CountryFilter", function() {
 
         return function(data, count) {
-            console.log("filter");
+            console.log("filterCountries");
             if(count > data.length || count < 1) {
                 return data;
             }
@@ -16,4 +16,6 @@ angular.module("countryApp")
         }
 
 
-    });
+    }
+
+);

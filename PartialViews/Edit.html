@@ -43,7 +43,7 @@
 </div>
 
     </div>
-    <div ng-repeat="track in AllTracks">{{track.trackName}}</div>
+    <div ng-repeat="track in AllTracks | filter:{countryId : country._id}">{{track.trackName}}</div>
     <div class="col-xs-12">
         <button type="submit" class="btn btn-primary pull-right" ng-click="saveCountry(country)">
             Save
