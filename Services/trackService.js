@@ -37,6 +37,11 @@ angular.module("countryApp").factory("trackService",
 
                 return Tracks;
             },
+
+            getTrackResource : function() {
+                return  $resource("https://travel-project.azurewebsites.net/tracks/:id",
+                    { id: "@id"},{ update: { method: 'PUT' }});
+            },
             getAllTracks: function () {
                 console.log("getAllTracks");
                 AllTracks = allTracksResource.query();

@@ -11,7 +11,7 @@ angular.module("countryApp")
         $scope.tracks = [];
         $scope.AllTracks = [];
 
-        $scope.tracks = trackService.getTracksForCountry($scope.country);
+        //$scope.tracks = trackService.getTracksForCountry($scope.country);
         $scope.AllTracks = trackService.getAllTracks();
 
         $scope.DeleteCountry = function() {
@@ -27,6 +27,7 @@ angular.module("countryApp")
             if ($scope.countryForm.$valid) {
                 console.log("the form is valid");
                 if (!$stateParams.country) { //new
+                    console.log("saving a new Country "+$scope.country.name)
                     new $scope.countryResource($scope.country).$save(function (country) {
                         $scope.country._id = country._id;
 
@@ -47,6 +48,10 @@ angular.module("countryApp")
             else {
                 alert("The form is not valid");
             }
+        },
+        $scope.DeleteTrack = function() {
+            //console.log("DeleteTrack "+$scope.tracks.);
+            //$scope.AllTracks.$delete({id: $scope.tracks.})
         }
 
     });

@@ -1,11 +1,12 @@
-
+<div class = "Container">
 <form novalidate name="countryForm" ng-submit="saveCountry()">
     <div class = "container">
+        <!-- Hide this div if country name is null IE we want to make a new-->
         <div  ng-show="country.name">
-        <label ng-hide ="!country.name">Edit Details for {{country.name}}</label></div>
+        <label ng-hide ="!country.name || country.name ===''">Edit Details for {{country.name}}</label></div>
     </div>
     <div class="form-group">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <label>Name</label>
 
             <input type="text" class="form-control"
@@ -14,7 +15,7 @@
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <label>Size</label>
             <input type="text" class="form-control"
                    ng-model="country.size" name="size"
@@ -22,7 +23,7 @@
         </div>
     </div>
     <div class="form-group">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <label>Population</label>
             <input type="text" class="form-control"
                    ng-model="country.population" name="population"
@@ -45,15 +46,39 @@
                    required ng-minlength="4" />
         </div>
     </div>
+    </form>
+</div>
+
+    <div class ="col-sm-12">
+
+        <label>Search Track</label>
+        <input ng-model = "filter">
+
+    </div>
+
+<div class ="col-sm-12">
+
+    <label>Add Track</label>
+    <input type="text" name="trackName" ng-model="track.name" >
+    <i class="ion-plus-circled"></i>
 
 
-    <div ng-repeat="track in AllTracks | filter:{countryId : country._id}"><label>{{track.trackName}}</label></div>
+
+</div>
+
+    <div class ="col-sm-2" ng-repeat="track in AllTracks | filter:{countryId : country._id}">
+        {{track.trackName}}
+        <i class="ion-close-circled" ng-click="DeleteTrack(track.id)"></i>
+
+    </div>
+
     <div class="col-xs-12">
         <button type="submit" class="btn btn-primary pull-right" ng-click = "SaveCountry(country)">
             Save
         </button>
         <button type="button" class="btn btn-default">Back</button>
         <button type="button" class="btn btn-danger" ng-click="DeleteCountry(country)">Delete</button>
+
     </div>
 
 </form>
