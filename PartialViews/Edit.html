@@ -48,7 +48,7 @@
     </div>
     </form>
 </div>
-
+<div class ="col-sm-12"><label>Tracks for {{country.name}}</label></div>
     <div class ="col-sm-12">
 
         <label>Search Track</label>
@@ -66,6 +66,7 @@
 
 </div>
 
+
     <div class ="col-sm-2" ng-repeat="track in AllTracks | filter:{countryId : country._id}">
         {{track.trackName}}
         <i class="ion-close-circled" ng-click="DeleteTrack(track.id)"></i>
@@ -76,7 +77,7 @@
         <button type="submit" class="btn btn-primary pull-right" ng-click = "SaveCountry(country)">
             Save
         </button>
-        <button type="button" class="btn btn-default">Back</button>
+        <button type="button" class="btn btn-default" ui-sref="Home">Back</button>
         <button type="button" class="btn btn-danger" ng-click="DeleteCountry(country)">Delete</button>
 
     </div>
