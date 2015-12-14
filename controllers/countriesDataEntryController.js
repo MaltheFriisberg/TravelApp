@@ -37,7 +37,7 @@ angular.module("countryApp")
                 }
                 else //editing
                 {
-                    //update example
+                    //update example from Christian
                     console.log("Editing "+$scope.country.name)
                     new $scope.countryResource($scope.country).$update(
                         {id: $scope.country._id}, function() {

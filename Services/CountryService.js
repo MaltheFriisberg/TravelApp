@@ -39,7 +39,7 @@ angular.module("countryApp").factory("countryService",
             //which controller should do this??
             saveCountry: function (countryToUpdate) {
                 //add to array
-                Countries.push()
+                Countries.push(countryToUpdate);
                 //$scope.countryResource.
 
                 //save with the api
