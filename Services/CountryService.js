@@ -12,7 +12,7 @@ angular.module("countryApp").factory("countryService",
 
         var countryResource =
             $resource("https://travel-project.azurewebsites.net/countries/:id",
-                {id: "@id"}, {update: {method: 'PUT'}, save: { method: "PUT" }});
+                {id: "@id"}, {update: {method: 'PUT'}, save: { method: "POST" }});
 
         var Countries = countryResource.query();
 
@@ -34,7 +34,7 @@ angular.module("countryApp").factory("countryService",
             },
             getResource: function () {
                 return $resource("https://travel-project.azurewebsites.net/countries/:id",
-                    {id: "@id"}, {update: {method: 'PUT'}, save: { method: "PUT" }});
+                    {id: "@id"}, {update: {method: 'PUT'}, save: { method: "POST" }});
             },
             //which controller should do this??
             saveCountry: function (countryToUpdate) {
