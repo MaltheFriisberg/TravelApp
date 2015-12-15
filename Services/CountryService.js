@@ -1,5 +1,5 @@
 /**
- * Created by Mal on 24-11-2015.
+ * Created and coded by Mal on 24-11-2015.
  */
 //Could Instantiate a new module, but lets not for now
 // help here https://docs.angularjs.org/tutorial/step_11

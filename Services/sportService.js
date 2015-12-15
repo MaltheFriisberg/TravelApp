@@ -1,5 +1,5 @@
 /**
- * Created by Mal on 01-12-2015.
+ * Created and coded by Mal on 01-12-2015.
  */
 angular.module("countryApp").factory("sportService",
     function($resource, $q) {

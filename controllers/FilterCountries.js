@@ -1,5 +1,5 @@
 /**
- * Created by Mal on 24-11-2015.
+ * Created and coded by Mal on 24-11-2015.
  */
 angular.module("countryApp")
     .filter("CountryFilter", function() {

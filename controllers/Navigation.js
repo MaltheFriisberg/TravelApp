@@ -1,5 +1,5 @@
 /**
- * Created by Mal on 19-11-2015.
+ * Created and coded by Mal on 19-11-2015.
  */
 
 angular.module("countryApp").config(
