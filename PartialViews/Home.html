@@ -1,13 +1,30 @@
 <div>
     <label>Search Country</label>
-<input ng-model="filter" name="Search">
-<button type="button" class="btn btn-default pull-right" ng-click="newCountry()"> new Country </button>
+    <input ng-model="filter" name="Search">
 </div>
 <!-- | filter : filter | CountryFilter -->
 <div ng-repeat="country in Countries | filter : filter | CountryFilter" class="col-xs-6">
-     <div ng-click="editCountry(country)">
-    <img ng-src="{{country.imageLocation}}">
-    <label>Name</label> {{country.name || CountryFilter}}
-         </div>
+    <div ng-click="editCountry(country)" data-toggle="tooltip" title="Click to Edit">
+        <img ng-src="{{country.imageLocation}}" >
+
+        <div>
+            <label>Name: </label> {{country.name || CountryFilter}}
+        </div>
+        <div>
+            <label>size: </label>{{country.size}}
+        </div>
+        <div>
+            <label>population: </label>{{country.population}}
+        </div>
+        <div>
+            <label>description: </label>{{country.description}}
+        </div>
+        <label>languages: </label>
+        <div ng-repeat="language  in country.languages">
+            {{language}}
+        </div>
+    </div>
+
 
 </div>
+
